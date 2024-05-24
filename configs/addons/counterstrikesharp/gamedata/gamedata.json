@@ -3,7 +3,7 @@
     "signatures": {
       "library": "server",
       "windows": "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57 48 81 EC 70 01 ? ? 8B E9",
-      "linux": "55 48 89 E5 41 57 49 89 D7 41 56 49 89 F6 41 55 41 89 FD"
+      "linux": "55 48 89 E5 41 57 49 89 D7 31 D2 41 56 4C 8D 75 98"
     }
   },
   "ClientPrint": {
@@ -36,7 +36,7 @@
     "signatures": {
       "library": "server",
       "windows": "44 88 4C 24 20 55 57 41 54 41 56 41 57 48 8D 6C 24 ? 48 81 EC ?",
-      "linux": "55 48 89 E5 41 57 41 56 41 55 41 54 49 89 FC 53 48 89 F3 48 81 EC C8 00 00 00"
+      "linux": " 55 48 89 E5 41 57 41 56 41 89 D6 41 55 49 89 FD 41 54 45 89 C4"
     }
   },
   "CCSPlayerPawnBase_PostThink": {
@@ -109,7 +109,7 @@
     "signatures": {
       "library": "server",
       "windows": "48 ? ? 4C 89 48 ? 48 89 48 ? 55 41",
-      "linux": "55 48 89 E5 41 57 41 56 41 55 41 54 49 89 FC 53 48 81 EC E8 01 00 00 48 8D 05 ? ? ? ?"
+      "linux": " 55 48 89 E5 41 57 41 56 41 55 41 54 49 89 FC 53 48 81 EC 88 00 00 00 48 8D 05 2A 2A 2A 2A"
     }
   },
   "UTIL_CreateEntityByName": {
@@ -170,7 +170,7 @@
     "signatures": {
       "library": "server",
       "windows": "40 56 57 48 83 EC 58 48 8B 41 10",
-      "linux": "55 48 89 E5 41 57 41 56 41 55 41 54 49 89 FC 53 48 83 EC 38 4C 8D 2D ? ? ? ? 49 8B 7D 00 48 85 FF 0F 84 ? ? ? ?"
+      "linux": "55 48 89 E5 41 57 41 56 41 55 41 54 49 89 FC 53 48 83 EC 48 4C 8D 2D 2A 2A 2A 2A 49 8B 7D 00 48 85 FF 0F 84 2A 2A 2A 2A"
     }
   },
   "CBaseTrigger_StartTouch": {
