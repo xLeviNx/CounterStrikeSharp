@@ -14,7 +14,7 @@ using CounterStrikeSharp.API.Core.Attributes;
 
 namespace CounterStrikeSharp.API.Core;
 
-public partial class CBaseCombatCharacter : CBaseFlex
+public partial class CBaseCombatCharacter : CBaseAnimGraph
 {
     public CBaseCombatCharacter (IntPtr pointer) : base(pointer) {}
 
@@ -37,6 +37,10 @@ public partial class CBaseCombatCharacter : CBaseFlex
 	// m_bDeathEventsDispatched
 	[SchemaMember("CBaseCombatCharacter", "m_bDeathEventsDispatched")]
 	public ref bool DeathEventsDispatched => ref Schema.GetRef<bool>(this.Handle, "CBaseCombatCharacter", "m_bDeathEventsDispatched");
+
+	// m_vecRelationships
+	[SchemaMember("CBaseCombatCharacter", "m_vecRelationships")]
+	public NetworkedVector<RelationshipOverride_t> Relationships => Schema.GetDeclaredClass<NetworkedVector<RelationshipOverride_t>>(this.Handle, "CBaseCombatCharacter", "m_vecRelationships");
 
 	// m_strRelationships
 	[SchemaMember("CBaseCombatCharacter", "m_strRelationships")]

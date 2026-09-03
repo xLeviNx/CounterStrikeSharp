@@ -122,6 +122,10 @@ public partial class CSceneEntity : CPointEntity
 	[SchemaMember("CSceneEntity", "m_hTarget8")]
 	public CHandle<CBaseEntity> HTarget8 => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CSceneEntity", "m_hTarget8");
 
+	// m_hLocatorOrigin
+	[SchemaMember("CSceneEntity", "m_hLocatorOrigin")]
+	public CHandle<CBaseEntity> LocatorOrigin => Schema.GetDeclaredClass<CHandle<CBaseEntity>>(this.Handle, "CSceneEntity", "m_hLocatorOrigin");
+
 	// m_sTargetAttachment
 	[SchemaMember("CSceneEntity", "m_sTargetAttachment")]
 	public string TargetAttachment
@@ -216,7 +220,7 @@ public partial class CSceneEntity : CPointEntity
 
 	// m_hActorList
 	[SchemaMember("CSceneEntity", "m_hActorList")]
-	public NetworkedVector<CHandle<CBaseFlex>> ActorList => Schema.GetDeclaredClass<NetworkedVector<CHandle<CBaseFlex>>>(this.Handle, "CSceneEntity", "m_hActorList");
+	public NetworkedVector<CHandle<CBaseModelEntity>> ActorList => Schema.GetDeclaredClass<NetworkedVector<CHandle<CBaseModelEntity>>>(this.Handle, "CSceneEntity", "m_hActorList");
 
 	// m_hRemoveActorList
 	[SchemaMember("CSceneEntity", "m_hRemoveActorList")]
@@ -245,6 +249,14 @@ public partial class CSceneEntity : CPointEntity
 	// m_OnResumed
 	[SchemaMember("CSceneEntity", "m_OnResumed")]
 	public CEntityIOOutput OnResumed => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CSceneEntity", "m_OnResumed");
+
+	// m_OnPulseRequirement
+	[SchemaMember("CSceneEntity", "m_OnPulseRequirement")]
+	public CEntityIOOutput OnPulseRequirement => Schema.GetDeclaredClass<CEntityIOOutput>(this.Handle, "CSceneEntity", "m_OnPulseRequirement");
+
+	// m_ActorMap
+	[SchemaMember("CSceneEntity", "m_ActorMap")]
+	public NetworkedVector<ActorMapping_t> ActorMap => Schema.GetDeclaredClass<NetworkedVector<ActorMapping_t>>(this.Handle, "CSceneEntity", "m_ActorMap");
 
 	// m_hInterruptScene
 	[SchemaMember("CSceneEntity", "m_hInterruptScene")]
@@ -300,7 +312,7 @@ public partial class CSceneEntity : CPointEntity
 
 	// m_hActor
 	[SchemaMember("CSceneEntity", "m_hActor")]
-	public CHandle<CBaseFlex> Actor => Schema.GetDeclaredClass<CHandle<CBaseFlex>>(this.Handle, "CSceneEntity", "m_hActor");
+	public CHandle<CBaseModelEntity> Actor => Schema.GetDeclaredClass<CHandle<CBaseModelEntity>>(this.Handle, "CSceneEntity", "m_hActor");
 
 	// m_hActivator
 	[SchemaMember("CSceneEntity", "m_hActivator")]

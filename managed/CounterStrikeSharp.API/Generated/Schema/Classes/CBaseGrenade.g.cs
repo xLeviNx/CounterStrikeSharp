@@ -14,9 +14,13 @@ using CounterStrikeSharp.API.Core.Attributes;
 
 namespace CounterStrikeSharp.API.Core;
 
-public partial class CBaseGrenade : CBaseFlex
+public partial class CBaseGrenade : CBaseAnimGraph
 {
     public CBaseGrenade (IntPtr pointer) : base(pointer) {}
+
+	// m_bDamageDetonating
+	[SchemaMember("CBaseGrenade", "m_bDamageDetonating")]
+	public ref bool DamageDetonating => ref Schema.GetRef<bool>(this.Handle, "CBaseGrenade", "m_bDamageDetonating");
 
 	// m_OnPlayerPickup
 	[SchemaMember("CBaseGrenade", "m_OnPlayerPickup")]

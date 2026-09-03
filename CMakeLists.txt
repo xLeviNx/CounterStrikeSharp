@@ -5,6 +5,7 @@ project(counterstrikesharp C CXX ASM)
 
 include("makefiles/shared.cmake")
 
+set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 set(FUNCHOOK_BUILD_TESTS OFF CACHE BOOL "Disable building tests for funchook." FORCE)
@@ -83,6 +84,8 @@ set(SOURCE_FILES
     src/core/cs2_sdk/interfaces/cgameresourceserviceserver.h
     src/core/cs2_sdk/interfaces/cs2_interfaces.h
     src/core/cs2_sdk/interfaces/cs2_interfaces.cpp
+    src/core/cs2_sdk/interfaces/navphysicsinterface.h
+    src/core/cs2_sdk/interfaces/navphysicsinterface.cpp
     src/core/cs2_sdk/schema.h
     src/core/cs2_sdk/schema.cpp
     src/core/function.cpp
@@ -107,6 +110,7 @@ set(SOURCE_FILES
     src/core/managers/voice_manager.h
     src/core/managers/usermessage_manager.cpp
     src/core/managers/usermessage_manager.h
+    src/scripting/natives/natives_raytrace.cpp
     src/scripting/natives/natives_dynamichooks.cpp
     src/core/game_system.h
     src/core/game_system.cpp

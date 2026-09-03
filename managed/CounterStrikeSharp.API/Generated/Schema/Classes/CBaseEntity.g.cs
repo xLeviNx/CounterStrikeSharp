@@ -98,6 +98,10 @@ public partial class CBaseEntity : CEntityInstance
 	[SchemaMember("CBaseEntity", "m_MoveType")]
 	public ref MoveType_t MoveType => ref Schema.GetRef<MoveType_t>(this.Handle, "CBaseEntity", "m_MoveType");
 
+	// m_nPreviouslySetMoveType
+	[SchemaMember("CBaseEntity", "m_nPreviouslySetMoveType")]
+	public ref MoveType_t PreviouslySetMoveType => ref Schema.GetRef<MoveType_t>(this.Handle, "CBaseEntity", "m_nPreviouslySetMoveType");
+
 	// m_nActualMoveType
 	[SchemaMember("CBaseEntity", "m_nActualMoveType")]
 	public ref MoveType_t ActualMoveType => ref Schema.GetRef<MoveType_t>(this.Handle, "CBaseEntity", "m_nActualMoveType");
@@ -181,10 +185,6 @@ public partial class CBaseEntity : CEntityInstance
 	// m_iSentToClients
 	[SchemaMember("CBaseEntity", "m_iSentToClients")]
 	public ref Int32 SentToClients => ref Schema.GetRef<Int32>(this.Handle, "CBaseEntity", "m_iSentToClients");
-
-	// m_flSpeed
-	[SchemaMember("CBaseEntity", "m_flSpeed")]
-	public ref float Speed => ref Schema.GetRef<float>(this.Handle, "CBaseEntity", "m_flSpeed");
 
 	// m_sUniqueHammerID
 	[SchemaMember("CBaseEntity", "m_sUniqueHammerID")]
